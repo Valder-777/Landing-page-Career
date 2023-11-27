@@ -1,5 +1,4 @@
 # Landing-page career
- Gandalf
 
 В данном проекте реализовано тестовое задание для претендента на вакансию frontend-developer.
 Задание:
