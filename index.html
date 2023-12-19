@@ -76,49 +76,36 @@
     </header>
 
 		<header class="header__mobile">
-			<nav class="menu__mobile">
-			<div class="menu__inner">
-						<a href="#" class="image"><img src="./assets/img/icons_mobile/Icon_search.svg" alt=""></a>
-					</div>
-					<div class="menu__inner"><img src="./assets/img/icons_mobile/Icon_tray.svg" alt=""></div>
-					<div class="menu__inner">
-						<div class="main-header__logo-wrapper">
-							<picture class="main-header__main-logo-bg">
-								<source
-									srcset="./assets/img/icons_mobile/Logo_Hexagon.svg"
-									type="image/webp"
-								/>
-								<img
-									src="./assets/img/icons_mobile/Logo_Hexagon.svg"
-									alt="Логотип"
-									title="Логотип"
-									loading="lazy"
-									decoding="async"
-								/>
-							</picture>
-						</div> 
-					</div>
+			<div class="nav">
+				<ul>
+					<li><a href="#">Профориентация</a><img src="./assets/img/icons_mobile/menu-arrow-bl.png" alt=""></li>
+					<li><a href="#">Вакансии</a><img src="./assets/img/icons_mobile/menu-arrow-bl.png" alt=""></li>
+					<li><a href="#">Карьра</a><img src="./assets/img/icons_mobile/menu-arrow-bl.png" alt=""></li>
+					<li><a href="#">Стажировка</a><img src="./assets/img/icons_mobile/menu-arrow-bl.png" alt=""></li>
+					<li><a href="#">Отзывы</a><img src="./assets/img/icons_mobile/menu-arrow-bl.png" alt=""></li>
+					<li><a class="button-white" href="#">Записаться на собеседование</a><img src="./assets/img/icons_mobile/menu-arrow-bl.png" alt=""></li>
+			</ul>
+			</div>
 
-					<div class="menu__inner">
-						<a href="#"><img src="./assets/img/icons_mobile/Icon_account.svg" alt=""></a>
-					</div>
-						<div class="menu__inner">
-            <a href="#"
-              ><img src="img/logo.png" alt="" class="logo" id="home"
-            /></a>
-            <div class="menu__burger"><span>toggle menu</span></div>
-          </div>
-          <ul class="menu">
-            <li class="menu__item active"><a href="#">Профориентация</a></li>
-            <li class="menu__item"><a href="#">Вакансии</a></li>
-            <li class="menu__item"><a href="#">Карьера</a></li>
-            <li class="menu__item"><a href="#">Стажировка</a></li>
-            <li class="menu__item"><a href="#">Отзывы</a></li>            
-          </ul>
-				</div>
-        </nav>
-          
-    </header>
+			<div class="header__item"><a href="#"><img src="./assets/img/icons_mobile/Icon_search.svg" alt=""></a></div>
+			<div class="header__item"><a href="#"><img src="./assets/img/icons_mobile/Icon_tray.svg" alt=""></a></div>
+			<div class="header__logo">
+				<a href="#" class="logo"
+					><picture> <img src="./assets/img/icons_mobile/Logo_Hexagon.svg" alt="Лого" /></picture
+				></a>
+			</div>
+			<div class="header__item"><a href="#"><img src="./assets/img/icons_mobile/Icon_account.svg" alt=""></a></div>
+
+<!-- Иконка бургерменю -->
+			<div class="burger">
+				<span></span>
+			</div>
+
+			
+		</nav>
+	</div>
+</div>
+</header>
 
 		<!-- main -->
     <main>
@@ -664,14 +651,14 @@
 								type="text"
                 class="form__input"
                 placeholder="Как к вам обращаться?"
-								pattern="(?=.*[а-я])(?=.*[А-Я]).{3,}"
+								
               />
 							<input required
                 id="tel"
 								type="tel"
                 class="form__input"
                 placeholder="Телефон"
-								pattern="(?=.*[0-9]).{6,}"
+								
               />
 							<input required
                 id="email"
@@ -720,10 +707,13 @@
               id=""
               placeholder="Ваши вопросы"
             ></textarea>
-
+						<div class="form__file load-file">
+							<span class="load-file__name">Имя файла</span>
+							<span class="load-file__delete-btn">Удалить</span>
+						</div>
             <div class="form__buttons-wrap">
               <label class="btn btn-white">
-                <input type="file" value="" />
+                <input type="file" onchange="processSelectedFile(this)" />
                 <div class="form__buttons-file">
                   <span>Прикрепить резюме</span>
                   <img src="./assets/img/icons/Paper_clip.svg" alt="" />
@@ -743,6 +733,5 @@
     </main>
   </body>
   <script src="assets/js/build/swiper.js"></script>
-	<script src="assets/js/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/main.js"></script>
+	<script src="assets/js/main.js"></script>
 </html>

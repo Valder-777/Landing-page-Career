@@ -564,14 +564,14 @@ ul {
 	background-color: #ffffff;
 }
 
-.form__input-wrap input:valid {
+.form__input.success {
 	background-image: url(../img/Icon_green_check.jpg);
 	background-repeat: no-repeat;
 	background-position: 95%;
 	border: 2px solid #9BCC37;
 }
 
-.form__input-wrap input:invalid {
+.form__input.fail {
 	background-image: url(../img/Icon_check_red.png);
 	background-repeat: no-repeat;
 	background-position: 95%;
@@ -677,4 +677,23 @@ input:focus {
 	font-family: Open Sans;
 	font-size: 18px;
 	font-weight: 700;
+}
+
+.form__file {
+	margin-bottom: 10px;
+}
+
+.load-file {
+	display: none;
+	gap: 10px;
+}
+
+.load-file__name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.load-file__delete-btn {
+	cursor: pointer;
+	text-decoration: underline;
 }
